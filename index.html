@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dangerous Fox Watches</title>
+<style>
+:root {
+  --gold: #c9a45c;
+  --black: #101010;
+  --gray: #1c1c1c;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--black);
+  color: #f5f1e8;
+  font-family: Arial, sans-serif;
+}
+header {
+  padding: 22px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+}
+.logo {
+  color: var(--gold);
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 19px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 22px;
+  font-size: 13px;
+}
+nav a:hover { color: var(--gold); }
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: radial-gradient(ellipse, #302719, #101010 70%);
+}
+.hero h1 {
+  font-size: clamp(34px, 6vw, 65px);
+  letter-spacing: 5px;
+  margin: 0 0 20px;
+}
+.hero h1 span { color: var(--gold); }
+.hero p {
+  color: #bbb;
+  letter-spacing: 2px;
+}
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: var(--gold);
+  color: #111;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 22px;
+  border: 0;
+  cursor: pointer;
+}
+section { padding: 65px 7%; }
+h2 {
+  text-align: center;
+  color: var(--gold);
+  letter-spacing: 3px;
+  margin-bottom: 35px;
+}
+.intro {
+  text-align: center;
+  max-width: 650px;
+  margin: auto;
+  line-height: 1.8;
+  color: #bbb;
+}
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 22px;
+}
+.product {
+  background: var(--gray);
+  padding: 25px;
+  text-align: center;
+  border: 1px solid #333;
+}
+.watch {
+  width: 125px;
+  height: 125px;
+  border: 7px solid #b99a59;
+  border-radius: 50%;
+  margin: 10px auto 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle,#333,#090909);
+  color: var(--gold);
+  font-size: 12px;
+  box-shadow: 0 0 25px #000;
+}
+.product h3 { color: var(--gold); }
+.product p { color: #aaa; font-size: 14px; }
+.configurator {
+  max-width: 750px;
+  margin: auto;
+  background: var(--gray);
+  padding: 30px;
+  border: 1px solid #554629;
+}
+.field { margin-bottom: 22px; }
+label {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--gold);
+}
+select {
+  width: 100%;
+  padding: 13px;
+  background: #111;
+  color: white;
+  border: 1px solid #555;
+}
+.result {
+  margin-top: 25px;
+  padding: 20px;
+  background: #111;
+  text-align: center;
+  border: 1px solid var(--gold);
+}
+.price {
+  font-size: 30px;
+  color: var(--gold);
+  margin: 12px;
+}
+footer {
+  text-align: center;
+  padding: 35px;
+  border-top: 1px solid #333;
+  color: #888;
+  font-size: 12px;
+}
+@media(max-width:600px) {
+  header { flex-direction: column; gap: 18px; }
+  nav a { margin: 0 7px; }
+  .hero { padding: 75px 15px; }
+  section { padding: 45px 5%; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">DF | DANGEROUS FOX</div>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#catalogo">Catálogo</a>
+    <a href="#configurador">Diseña tu reloj</a>
+  </nav>
+</header>
+
+<div class="hero" id="inicio">
+  <h1>DANGEROUS <span>FOX</span></h1>
+  <p>RELOJES PERSONALIZADOS · DISEÑOS ÚNICOS</p>
+  <a class="btn" href="#configurador">CREA TU RELOJ</a>
+</div>
+
+<section>
+  <h2>NUESTRA FILOSOFÍA</h2>
+  <p class="intro">
+    En Dangerous Fox Watches creemos que un reloj debe
+    representar a quien lo lleva. Diseñamos y montamos
+    relojes personalizados cuidando cada detalle.
+    Cada creación tiene su propia personalidad.
+  </p>
+</section>
+
+<section id="catalogo">
+  <h2>CATÁLOGO</h2>
+  <div class="catalog">
+    <div class="product">
+      <div class="watch">DF</div>
+      <h3>DF CLASSIC</h3>
+      <p>Elegancia y personalidad.</p>
+    </div>
+    <div class="product">
+      <div class="watch">DF</div>
+      <h3>DF AUTOMATIC</h3>
+      <p>La esencia de la relojería mecánica.</p>
+    </div>
+    <div class="product">
+      <div class="watch">DF</div>
+      <h3>DF CUSTOM</h3>
+      <p>Una creación hecha a tu gusto.</p>
+    </div>
+  </div>
+</section>
+
+<section id="configurador">
+  <h2>DISEÑA TU RELOJ</h2>
+  <p class="intro">
+    Elige los componentes y empieza a crear un reloj
+    que sea exclusivamente tuyo.
+  </p>
+  <br>
+  <div class="configurator">
+    <div class="field">
+      <label for="movement">Movimiento</label>
+      <select id="movement">
+        <option value="35">Seiko NH35 automático</option>
+        <option value="45">Seiko NH36 automático</option>
+        <option value="25">Miyota 8215 automático</option>
+        <option value="15">Cuarzo</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="dial">Color de esfera</label>
+      <select id="dial">
+        <option>Negro</option>
+        <option>Azul</option>
+        <option>Verde</option>
+        <option>Blanco</option>
+        <option>Morado</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="case">Caja</label>
+      <select id="case">
+        <option value="25">Acero inoxidable</option>
+        <option value="35">Negro</option>
+        <option value="40">Oro rosa</option>
+        <option value="40">Dorado</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="hands">Agujas</label>
+      <select id="hands">
+        <option>Plateadas</option>
+        <option>Doradas</option>
+        <option>Negras</option>
+        <option>Oro rosa</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="strap">Correa</label>
+      <select id="strap">
+        <option value="15">Cuero</option>
+        <option value="20">Acero</option>
+        <option value="12">NATO</option>
+        <option value="18">Silicona</option>
+      </select>
+    </div>
+    <div class="result">
+      <h3>Tu configuración</h3>
+      <p id="summary">Selecciona los componentes.</p>
+      <div class="price" id="price">Precio orientativo: 115 €</div>
+      <small>Precio de ejemplo, pendiente de confirmar.</small>
+    </div>
+  </div>
+</section>
+
+<footer>
+  DANGEROUS FOX WATCHES<br><br>
+  RELOJES PERSONALIZADOS · DISEÑOS ÚNICOS<br><br>
+  © 2026 Dangerous Fox Watches
+</footer>
+
+<script>
+const fields = ['movement','case','strap'];
+const names = {
+  movement: 'Movimiento',
+  dial: 'Esfera',
+  case: 'Caja',
+  hands: 'Agujas',
+  strap: 'Correa'
+};
+
+function update() {
+  let total = 40;
+  fields.forEach(id => {
+    total += Number(document.getElementById(id).value);
+  });
+
+  const selections = Object.keys(names).map(id => {
+    const el = document.getElementById(id);
+    return names[id] + ': ' + el.options[el.selectedIndex].text;
+  });
+
+  document.getElementById('summary').textContent =
+    selections.join(' · ');
+  document.getElementById('price').textContent =
+    'Precio orientativo: ' + total + ' €';
+}
+
+document.querySelectorAll('select').forEach(el => {
+  el.addEventListener('change', update);
+});
+update();
+</script>
+
+</body>
+</html>
